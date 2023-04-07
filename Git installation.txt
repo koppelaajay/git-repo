@@ -1,0 +1,88 @@
+Git installation:
+
+       yum install git -y
+       git version
+       git --version
+
+How to configure:
+      git config --global user.name "ajay"
+      git config --global user.email "ajay@cloudbots.com"
+      git config --list
+
+Normal repo to git repo:
+      git init
+
+Create directory or file:
+      mkdir cloudbots
+      ll
+      ls
+      cd cloudbots or  cd cloudbots/
+      cd ..
+      cd cloudbots/
+      ll
+      ls -al
+      git init
+      git status
+      vi gitfile.1
+      cat gitfile.1
+      vi gitfile.1
+      git status
+      git add gitfile.1
+      git status
+      git commit -m "for gitfile.1" gitfile.1
+      git status
+      ls
+To check version id for file:
+      git log
+
+Git branching stragies:
+       git status
+      ll
+      git branch
+      ll
+      cd cloudbots
+      git branch
+      git branch <bug1.file>   
+      git branch
+
+Any bug fixing work on only copy file and after merge to master:
+      git checkout bug1.file
+      git branch
+      ll
+      vi bug1.file
+      git status
+      git -am "fixing bug1.file" bug1.file
+      git add .
+      git commit -m "fixing bug1.file" bug1.file
+      git status
+      git checkout master
+      git branch
+      git merge bug1.file
+      ll
+
+How to resolve conflict:
+       vi gitfile.1
+       cat gitfile.1
+       git status
+       git add .
+       git commit -m "commit pooja's code" gitfile.1
+       git status
+       git branch
+       git checkout bug1.file
+       ll
+       vi gitfile.1
+       git add .
+       git commit -m "commit arjun's code" gitfile.1
+       git status
+       git checkout master
+       ll
+       git merge bug1.file
+       vi gitfile.1
+       git add .
+       git commit -m "commit both codes" gitfile.1
+       vi gitfile.1
+       git status
+       git branch -m bug1.file bugfile.1<----> to change branch name 
+       git branch -d <branch name> ------------> to delete branch
+
+
