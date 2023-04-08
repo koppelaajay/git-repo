@@ -1,0 +1,41 @@
+Maven setup:
+       sudo su
+       cd /opt
+       yum install java-11 -y
+       java -version
+       wget https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.tar.gz
+       ll
+       tar -xvf apache-maven-3.9.1-bin.tar.gz
+       ll
+       mv apache-maven-3.9.1 maven2
+       ll
+       cd maven2/
+       vi ~/.bash-profile
+       (export M2_HOME="/opt/maven")
+       (export PATH=$PATH:$M2_HOME/bin)
+       mvn -version
+       source ~/.bash-profile
+       mvn -version
+       mvn archetype:generate
+       1721:1721
+       groupid:www.jay
+       artifactid:jay-project
+       yum install tree -y
+       tree .
+       ll
+       cd jay-project/
+       tree .
+       ll
+       vi  pom.xml
+       mvn validate
+       mvn compile
+       tree .
+       mvn test
+       mvn package
+       tree .
+       mvn verify
+       mvn install
+       ll
+       tree .
+       mvn deploy
+       histroy
