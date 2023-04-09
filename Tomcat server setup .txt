@@ -1,0 +1,48 @@
+Tomcat server setup :
+       cd /opt
+       java -version
+       yum install java-11 -y   
+       wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.7/bin/apache-tomcat-10.1.7.tar.gz
+       ll
+       tar -xvzf apache-tomcat-10.1.7.tar.gz
+       ll
+       mv apache-tomcat-10.1.7 tomcat
+       ll
+       cd tomcat/
+       ll
+       cd conf
+       ll
+       vi tomcat-users.xml
+Here add user name and password :
+      <role rolename="manager-gui"/>
+      <user username="tomcat" password="s3cret" roles="manager-gui"/>
+       cd ..
+       cd webapps
+       ll
+       cd manager
+       ll
+       cd META-INF
+       ll
+       vi context.xml
+       cd ..
+       cd WEB-INF
+       cd ..
+       ll
+       cd host-manager
+       ll
+       cd WEB-INF
+       ll
+       vi manager.xml
+       cd ..
+       cd META-INF
+       ll
+       vi context.xml
+       cd ../..
+       cd ..
+       ll
+       cd bin/
+       ll
+       sh startup.sh
+       sh shutdown.sh
+ 
+
