@@ -14,8 +14,8 @@ Tomcat server setup :
        ll
        vi tomcat-users.xml
 Here add user name and password :
-      <role rolename="manager-gui"/>
-      <user username="tomcat" password="s3cret" roles="manager-gui"/>
+      <role rolename="manager-gui,admin-gui"/>
+      <user username="tomcat" password="s3cret" roles="manager-gui,admin-gui"/>
        cd ..
        cd webapps
        ll
@@ -25,15 +25,9 @@ Here add user name and password :
        ll
        vi context.xml
        cd ..
-       cd WEB-INF
-       cd ..
        ll
        cd host-manager
        ll
-       cd WEB-INF
-       ll
-       vi manager.xml
-       cd ..
        cd META-INF
        ll
        vi context.xml
